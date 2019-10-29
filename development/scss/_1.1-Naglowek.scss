@@ -10,15 +10,15 @@
 .logo {
   display: flex;
   font-family: 'Charmonman', cursive;
-  font-weight: 400;
-  color: #FFFFFA;
-  font-size: 38px;
-  margin-left: 75px;
-  u {
-    color:#FF6600;
-    text-decoration: none;
-    font-weight: 700;
-   }
+  margin-left: 30px;
+}
+#first {
+  font-weight:100;
+  color: white;
+}
+#second {
+  color:#E58A20;
+  font-weight: 700;
 }
 .redirect {
   display: flex;
@@ -28,9 +28,6 @@
 .redirect-menu {
   list-style: none;
   display: flex;
-  li:first-child a {
-    color:#FF6600;
-  }
 }
 .sub-page {
   display: flex;
@@ -42,5 +39,8 @@
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
+    &:hover {
+      color: #E58A20;
+    }
   }
 }

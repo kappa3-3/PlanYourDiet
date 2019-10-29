@@ -3,7 +3,15 @@
     height: 75%;
     width: 90%;
     background: $whiteBackground;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: $blueTextHeaderColumns;
 }
 .app-welcome-text {
-    color: #ddd;
+    font-size: 24px;
+    u {
+        font-size: 36px;
+        text-decoration: none;
+    }
 }

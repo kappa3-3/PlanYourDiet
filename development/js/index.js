@@ -5,6 +5,7 @@ const liArray = document.querySelectorAll('.slider-item');
 let currentIndex = 0;
 liArray[currentIndex].style.display = 'block';
 
+
 nextBtn.addEventListener('click', function () {
     if (currentIndex === liArray.length - 1){
         currentIndex = 0;
@@ -15,7 +16,7 @@ nextBtn.addEventListener('click', function () {
         liArray[i].style.display = 'none';
     }
     liArray[currentIndex].style.display = 'block';
-
+    liArray[currentIndex].style.transition = "transform .5s ease-in-out";
 });
 prevBtn.addEventListener('click', function () {
     if (currentIndex === 0){

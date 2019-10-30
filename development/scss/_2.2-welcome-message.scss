@@ -1,9 +1,11 @@
-.app-welcome-whitebg {
-    background: $whiteBackground;
+.app-welcome-dashboard {
     margin: 50px auto;
     height: calc(100% - 130px);
     width: 90%;
     border: 1px dashed $tableTextColorIcons;
+}
+.app-welcome-dashboard_whitebg {
+    background: $whiteBackground;
 }
 .app-welcome {
     display: flex;

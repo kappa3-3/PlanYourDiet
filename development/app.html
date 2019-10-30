@@ -17,7 +17,7 @@
         <span id="first">Zaplanuj</span>
         <span id="second">Jedzonko</span>
     </h1>
-    <div class="app-header__imie">Imię<i class="fas fa-user-circle"></i></div>
+    <div class="app-header__imie"><span id="nameInHeader">Imię</span><i class="fas fa-user-circle"></i></div>
 </header>
 <nav class="app-navbar">
     <ul class="app-navbar__menu">
@@ -27,7 +27,7 @@
     </ul>
 </nav>
 <main class="app-main">
-    <section class="app-welcome-whitebg">
+    <section class="app-welcome-dashboard app-welcome-dashboard_whitebg">
         <div class="app-welcome">
             <p class="app-welcome-text">
                 <u class="app-welcome-text_witaj">Witaj,</u><br>
@@ -37,11 +37,19 @@
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required
                        placeholder="Tutaj wpisz jak masz na imię">
-                <button class="send-name-button">Gotowe!</button>
+                <button id="send-name-button" class="send-name-button">Gotowe!</button>
                 <p class="app-welcome-text__below-button">Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą
                     aplikację :)</p>
             </div>
         </div>
+        <div class="app-dashboard-widget app-dashboard-widget-add-recipe"></div>
+        <div class="app-dashboard-widget app-dashboard-widget-add-plan"></div>
+        <div class="app-dashboard-info-boxes">
+            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-quantity"></div>
+            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-reminder"></div>
+            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-great"></div>
+        </div>
+        <div class="app-weekly-plan"></div>
     </section>
     <!--        test code available for further app development-->
     <!--        <div class="app-row">-->

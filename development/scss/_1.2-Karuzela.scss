@@ -12,17 +12,22 @@
 #prevPicture {
   position: absolute;
   left: 25px;
-  top: 215px;
-  height: 75px;
+  top: 325px;
   display: block;
+  background-color: transparent;
+  border: none;
+  font-size: 35px;
+  color: #4a4a49;
 }
 
 #nextPicture {
   position: absolute;
   right: 25px;
-  top: 215px;
+  top: 325px;
   background-color: transparent;
   border: none;
+  font-size: 35px;
+  color: #4a4a49;
 }
 .slider {
   list-style: none;
@@ -45,19 +50,21 @@
   }
   h1 {
     top: 20%;
-    left: 35%;
+    left: 50%;
     color: white;
     font-size: 60px;
     position: absolute;
+    transform: translate(-50%, 50%);
   }
   p {
-    top: 45%;
-    left: 20%;
+    top: 40%;
+    left: 50%;
     color: white;
     font-size: 30px;
     position: absolute;
     width: 50%;
     text-align: center;
+    transform: translate(-50%, 50%);
   }
 }
 .slider .visible {

@@ -1,1 +1,29 @@
-form
+form {
+  border: 3px solid white;
+  font-family: Open Sans;
+  font: 14px;
+  background: #848887
+}
+
+.container {
+  color: white;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  width: 1048px;
+}
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #FF6600;
+  color: white;
+  border: none;
+}

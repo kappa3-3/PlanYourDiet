@@ -1,1 +1,20 @@
-autor
+.author {
+  font-family: Open Sans;
+  font: 14px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1048px;
+  background: #EBEBEB;
+ }
+
+.col4 {
+  font: #5E5E5E;
+  flex: 1;
+  }
+
+
+.col5 {
+  font: #5E5E5E;
+  flex: 2;
+}

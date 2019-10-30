@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"-->
+<!--          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
 </head>
 <body class="app-body">
 <header class="app-header">
@@ -42,14 +42,81 @@
                     aplikację :)</p>
             </div>
         </div>
-        <div class="app-dashboard-widget app-dashboard-widget-add-recipe"></div>
-        <div class="app-dashboard-widget app-dashboard-widget-add-plan"></div>
-        <div class="app-dashboard-info-boxes">
-            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-quantity"></div>
-            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-reminder"></div>
-            <div class="app-dashboard-info-boxes__box app-dashboard-info-boxes__box-great"></div>
+        <div class="app-dashboard-logged-in">
+            <div class="app-dashboard-widget app-dashboard-widget-add-recipe">aaa</div>
+            <div class="app-dashboard-widget app-dashboard-widget-add-plan">sss</div>
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-quantity"><i
+                    class="fas fa-info-circle"></i>
+                <p>Masz już 99 przepisów, nieźle!</p><i class="fas fa-window-close"></i></div>
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-reminder"><i
+                    class="fas fa-exclamation-circle"></i><p>Pamiętaj, aby dodać plan!</p><i class="fas fa-window-close"></i>
+            </div>
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-great"><i class="fas fa-check-circle"></i>
+                    <p>Świetnie że jesteś! Udanego planowania i smaczego! :)</p><i class="fas fa-window-close"></i></div>
+            <div class="app-weekly-plan">
+                <p>Twój plan na {nr_tygodnia} tydzień: </p>
+                <table class="tg weekly-plan">
+                    <tr>
+                        <th class="tg-fymr">Poniedziałek</th>
+                        <th class="tg-fymr">Wtorek</th>
+                        <th class="tg-fymr">Środa</th>
+                        <th class="tg-fymr">Czwartek</th>
+                        <th class="tg-fymr">Piątek</th>
+                        <th class="tg-fymr">Sobota</th>
+                        <th class="tg-fymr">Niedziela</th>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                        <td class="tg-0pky">sniadanie</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                        <td class="tg-0pky">drugie sniadanie</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                        <td class="tg-0pky">zupa</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                        <td class="tg-0pky">drugie danie</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                        <td class="tg-0pky">kolacja</td>
+                    </tr>
+                </table>
+                <div class="plan-tygodnia-next-prev">
+                    <div class="prevuius-plan"><i class="fas fa-angle-double-left"></i>poprzedni</div>
+                    <div class="next-plan">następny<i class="fas fa-angle-double-right"></i></div>
+                </div>
+            </div>
         </div>
-        <div class="app-weekly-plan"></div>
     </section>
     <!--        test code available for further app development-->
     <!--        <div class="app-row">-->

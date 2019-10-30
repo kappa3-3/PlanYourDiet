@@ -1,5 +1,5 @@
 .app-body {
-    min-height: 100vh;
+    //min-height: 100vh;
     margin: 0;
     display: grid;
     font-family: 'Open Sans', sans-serif;
@@ -59,6 +59,7 @@
     padding: 0;
     font-size: 20px;
     color: $whiteBackground;
+    text-decoration: none;
     li {
         height: 75px;
         display: flex;

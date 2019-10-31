@@ -39,6 +39,9 @@
 .slider-item {
   display: none;
   position: relative;
+  .textGrey {
+    color: $blueTextHeaderColumns;
+  }
   img {
     display: block;
     width: 100%;
@@ -66,9 +69,6 @@
     text-align: center;
     transform: translate(-50%, 50%);
   }
-}
-.textGrey {
-  color: $blueTextHeaderColumns;
 }
 .slider .visible {
   display: block;

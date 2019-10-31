@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     const loggedInDashboard = document.querySelector('.app-dashboard-logged-in');
     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');
+    const btnSaveClose = document.getElementById('saveClose');
 
     //Open the recipes box
     addRecipeBtn = document.querySelector('.app-dashboard-widget-add-recipe');
@@ -13,38 +14,137 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     //Append icons to li items
-    stepLi = document.querySelectorAll('.step');
-    ingrLi = document.querySelectorAll('.ingr');
-    for (i = 0; i < stepLi.length; i++) {
+
+        stepLi = document.querySelectorAll('.step');
+        ingrLi = document.querySelectorAll('.ingr');
+        let editIcon;
+        let trashIcon;
+        for (i = 0; i < stepLi.length; i++) {
+            editIcon = document.createElement('i');
+            trashIcon = document.createElement('i');
+            editIcon.classList.add("fas", "fa-edit", "orange", "editicon");
+            trashIcon.classList.add("fas", "fa-trash-alt", "red", "trashicon");
+            stepLi[i].appendChild(editIcon);
+            stepLi[i].appendChild(trashIcon);
+
+        }
+        for (i = 0; i < ingrLi.length; i++) {
+            editIcon = document.createElement('i');
+            trashIcon = document.createElement('i');
+            editIcon.classList.add("fas", "fa-edit", "orange", "editicon");
+            trashIcon.classList.add("fas", "fa-trash-alt", "red", "trashicon");
+            ingrLi[i].appendChild(editIcon);
+            ingrLi[i].appendChild(trashIcon);
+        }
+
+
+    function addEditAndTrashIcons(where) {
         editIcon = document.createElement('i');
         trashIcon = document.createElement('i');
-        editIcon.classList.add("fas", "fa-edit", "orange");
-        trashIcon.classList.add("fas", "fa-trash-alt", "red");
-        stepLi[i].appendChild(editIcon);
-        stepLi[i].appendChild(trashIcon);
-    }
-    for (i = 0; i < ingrLi.length; i++) {
-        editIcon = document.createElement('i');
-        trashIcon = document.createElement('i');
-        editIcon.classList.add("fas", "fa-edit", "orange");
-        trashIcon.classList.add("fas", "fa-trash-alt", "red");
-        ingrLi[i].appendChild(editIcon);
-        ingrLi[i].appendChild(trashIcon);
+        editIcon.classList.add("fas", "fa-edit", "orange", "editicon");
+        trashIcon.classList.add("fas", "fa-trash-alt", "red", "trashicon");
+        where.appendChild(editIcon);
+        where.appendChild(trashIcon);
     }
 
-    editIcon.addEventListener('click', function () {
-        console.log("tak działa editicon");
+
+
+
+
+
+    const allEditIcons = document.querySelectorAll('.editicon');
+    const allTrashIcons = document.querySelectorAll('.trashicon');
+
+    //Functionalność każdego Edit Icon
+    for (i = 0; i < allEditIcons.length; i++) {
+        allEditIcons[i].addEventListener('click', function () {
+        });
+    }
+    //Functionalność każdego Trash Icon
+    for (i = 0; i < allTrashIcons.length; i++) {
+        allTrashIcons[i].addEventListener('click', function () {
+        });
+    }
+
+
+///////////////////////////////
+//         START LOCAL STORAGE
+///////////////////////////////
+const recipeTitle = document.getElementById('recipe-name').value;
+const recipeDescription = document.getElementById('recipe-description').value;
+const btnAddInstructions = document.getElementById('btnAddInstructions');
+const btnAddIngredients = document.getElementById('btnAddIngredients');
+const ulIngredientsList = document.getElementById('add-recipe__ingredients-list-ullist');
+const olInstrucitonsList = document.getElementById('add-recipe__instructions-list-ollist');
+
+    let newRecipe = {
+        title: "",
+        description: "",
+        instructions:[],
+        ingredients:[]
+    };
+
+
+    //////////////
+    // ADD INSTRUCTIONS
+    //////////////
+    const instruction = document.getElementById('add-recipe-instructions');
+    function renderNewInstruction(instruction) {
+        let newInstruction = document.createElement('LI');
+        newInstruction.innerText = instruction;
+        olInstrucitonsList.appendChild(newInstruction);
+        addEditAndTrashIcons(newInstruction);
+    }
+
+    btnAddInstructions.addEventListener('click', function () {
+        newRecipe.instructions.push(instruction.value);
+        renderNewInstruction(instruction.value);
+        console.log(newRecipe)
+
     });
 
-    trashIcon.addEventListener('click', function () {
-        console.log(2 + 2);
+    //////////////
+    // ADD INGREDIENTS
+    //////////////
+    const ingredient = document.getElementById('add-recipe-ingredients');
+    function renderNewIngredient(ingredient) {
+    let newIngredient = document.createElement('LI');
+    newIngredient.innerText = ingredient;
+    ulIngredientsList.appendChild(newIngredient);
+    addEditAndTrashIcons(newIngredient);
+    }
+
+    btnAddIngredients.addEventListener('click', function () {
+        newRecipe.ingredients.push(ingredient.value);
+        renderNewIngredient(ingredient.value);
+        console.log(newRecipe)
     });
 
 
 
+    //////////////
+    // SAVE RECIPE TO LOCAL STORAGE
+    //////////////
+    function saveRecipeToLocalStorage(newRecipe) {
+        let dataFromLocalStorage = [];
+        if (localStorage.getItem("recipes") != null) {
+            dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
+            dataFromLocalStorage.push(newRecipe);
+            localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage))
+        } else {
+            dataFromLocalStorage.push(newRecipe);
+            localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+        }
+        alert("Przepis zapisany do localStorage");
+    }
 
-
-
+    btnSaveClose.addEventListener('click', function (e) {
+        e.preventDefault();
+        newRecipe.title = recipeTitle;
+        newRecipe.description = recipeDescription;
+        saveRecipeToLocalStorage(recipe);
+        console.log("zapisano", recipe);
+    });
 
 
 

@@ -122,7 +122,50 @@
                     <div class="next-plan">następny<i class="fas fa-angle-double-right"></i></div>
                 </div>
             </div>
+
+
+
+
         </div>
+
+        <div class="app-dashboard-logged-in__add-recipe">
+            <div class="add-recipe__header">
+                <h2>Nowy przepis</h2>
+                <button>Zapisz i zamknij</button>
+            </div>
+            <div class="add-recipe__recipe-name">
+                <p>Nazwa przepisu</p>
+                <label for="recipe-name">Name (4 to 8 characters):</label>
+                <input type="text" id="recipe-name" name="recipe-name" required
+                       placeholder="Zapiekanka z ziemniakami i brukselką">
+            </div>
+            <div class="add-recipe__recipe-description">
+                <p>Opis przepisu</p>
+                <label for="recipe-name">Name (4 to 8 characters):</label>
+                <textarea type="textarea" id="recipe-description" name="description-name" rows="4" cols="50" required
+                          placeholder="Mamusina najlepsza zapiekanka pod słońcem. Można ją podać jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy paprykowej sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z zalecanimi Makłowicza, podawać z dobrze dobranym winkiem ;)
+
+"></textarea>
+            </div>
+            <div class="add-recipe__instructions">
+                <h3>Instrukcje</h3>
+                <div class="instruction-add-functionality">
+                    <textarea name="instructions" id="add-recipe-instructions" rows="4" class="instructions"
+                              placeholder="Po tym czasie ziemniaki zalej śmietaną wymieszaną z Knorr Naturalnie smaczne, dodaj liście brukselki i dokładnie wymieszaj."></textarea>
+                    <i class="fas fa-plus-square"></i>
+                </div>
+            </div>
+            <div class="add-recipe__ingredients">
+                    <h3>Składniki</h3>
+                <div class="ingredient-add-functionality">
+                    <textarea name="ingredients" id="add-recipe-ingredients" rows="4" class="ingredients"
+                              placeholder="tarty parmezan lub inny ser"></textarea>
+                    <i class="fas fa-plus-square"></i>
+                </div>
+            </div>
+
+        </div>
+
     </section>
     <!--        test code available for further app development-->
     <!--        <div class="app-row">-->
@@ -138,5 +181,6 @@
 
 </main>
 <script src="./js/app.js"></script>
+<script src="./js/add-recipe.js"></script>
 </body>
 </html>

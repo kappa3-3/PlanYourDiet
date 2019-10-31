@@ -27,10 +27,12 @@
 .app-dashboard-widget-add-recipe {
     grid-area: dpr;
     border-color: $greenSuccessColor;
+    cursor: pointer;
 }
 .app-dashboard-widget-add-plan {
     grid-area: dpl;
     border-color: $greenSuccessColor;
+    cursor: pointer;
 }
 .app-dashboard-info-boxes__box-quantity, .app-dashboard-info-boxes__box-reminder, .app-dashboard-info-boxes__box-great {
     font-size: 20px;

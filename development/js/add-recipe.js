@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
     addRecipeBtn.addEventListener('click', function () {
         loggedInDashboard.style.display = "none";
         addRecipe.classList.add('fade-in');
+        addRecipe.style.display = "grid";
     });
 
 
@@ -70,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function(){
 ///////////////////////////////
 //         START LOCAL STORAGE
 ///////////////////////////////
-const recipeTitle = document.getElementById('recipe-name').value;
-const recipeDescription = document.getElementById('recipe-description').value;
+const recipeTitle = document.getElementById('recipe-name');
+const recipeDescription = document.getElementById('recipe-description');
 const btnAddInstructions = document.getElementById('btnAddInstructions');
 const btnAddIngredients = document.getElementById('btnAddIngredients');
 const ulIngredientsList = document.getElementById('add-recipe__ingredients-list-ullist');
@@ -102,6 +103,9 @@ const olInstrucitonsList = document.getElementById('add-recipe__instructions-lis
         console.log(newRecipe)
 
     });
+
+
+
 
     //////////////
     // ADD INGREDIENTS
@@ -139,11 +143,23 @@ const olInstrucitonsList = document.getElementById('add-recipe__instructions-lis
     }
 
     btnSaveClose.addEventListener('click', function (e) {
-        e.preventDefault();
-        newRecipe.title = recipeTitle;
-        newRecipe.description = recipeDescription;
-        saveRecipeToLocalStorage(recipe);
-        console.log("zapisano", recipe);
+
+        if (recipeTitle.value === "" || recipeDescription.value === ""){
+            alert("Musisz uzupełnić wszystkie pola")
+        } else {
+            e.preventDefault();
+            newRecipe.title = recipeTitle.value;
+            newRecipe.description = recipeDescription.value;
+            saveRecipeToLocalStorage(newRecipe);
+            console.log("zapisano", newRecipe);
+            // addRecipe.parentNode.removeChild(addRecipe);
+            addRecipe.style.display = "none";
+            loggedInDashboard.style.display = "grid";
+            addRecipe.classList.add('fade-in');
+        }
+
+
+
     });
 
 

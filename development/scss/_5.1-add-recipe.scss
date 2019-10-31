@@ -2,7 +2,7 @@
     border-color: $tableTextColorIcons;
     background: $whiteBackground;
     border: 1px dashed;
-    padding: 20px;
+    padding: 25px 50px;
     box-sizing: border-box;
     display: grid;
     grid-gap: 22px;
@@ -17,11 +17,12 @@
                          "des des des des des des des des des des des des des des"
                          "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
                          "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
-                         "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
-                         "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
-                         "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
-                         "ins ins ins ins ins ins ins ing ing ing ing ing ing ing"
-                         "ins ins ins ins ins ins ins ing ing ing ing ing ing ing";
+                         "isl isl isl isl isl isl isl igl igl igl igl igl igl igl"
+                         "isl isl isl isl isl isl isl igl igl igl igl igl igl igl"
+                         "isl isl isl isl isl isl isl igl igl igl igl igl igl igl"
+                         "isl isl isl isl isl isl isl igl igl igl igl igl igl igl"
+                         "isl isl isl isl isl isl isl igl igl igl igl igl igl igl";
+
     opacity: 0;
     label {
         display: none;
@@ -38,14 +39,9 @@
     justify-content: space-between;
     align-items: flex-end;
     text-transform: uppercase;
-    color: $orange;
-    font-weight: 700;
-    font-size: 24px;
     border-bottom: 2px solid lighten($tableTextColorIcons, 20);
     h2 {
-        margin: 0;
-        padding:0;
-        font-size: 24px;
+        @include apph2;
     }
 }
 button {
@@ -128,4 +124,27 @@ button {
     grid-area: ing;
     display: flex;
     flex-direction: column;
+}
+.add-recipe__instructions-list, .add-recipe__ingredients-list {
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 60%;
+    li {
+        padding-left: 5px;
+        padding-bottom: 2px;
+        .orange {
+            color: $orangeWarningMessages;
+            padding-left: 5px;
+        }
+        .red {
+            color: $trashIconColor;
+            padding-left: 5px;
+        }
+    }
+}
+.add-recipe__instructions-list {
+    grid-area: isl;
+}
+.add-recipe__ingredients-list {
+    grid-area: igl;
 }

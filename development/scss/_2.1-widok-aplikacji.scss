@@ -80,8 +80,26 @@
                 right: 10px;
             }
         }
+    } a {
+    text-decoration: none;
+    color: $whiteBackground;
+          }
+}
+ul.app-navbar__menu .open {
+    font-weight: 700;
+    border-left: 5px solid $orange;
+    padding-left: 25px;
+    &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        display: block;
+        position: absolute;
+        color: $orange;
+        right: 10px;
+    }
+    &:hover {
+        padding-left: -25px;
     }
 }
-
 
 

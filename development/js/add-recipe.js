@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function(){
     const loggedInDashboard = document.querySelector('.app-dashboard-logged-in');
     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function(){
         stepLi[i].appendChild(editIcon);
         stepLi[i].appendChild(trashIcon);
     }
-
     for (i = 0; i < ingrLi.length; i++) {
         editIcon = document.createElement('i');
         trashIcon = document.createElement('i');
@@ -35,7 +32,13 @@ document.addEventListener('DOMContentLoaded', function(){
         ingrLi[i].appendChild(trashIcon);
     }
 
+    editIcon.addEventListener('click', function () {
+        console.log("tak działa editicon");
+    });
 
+    trashIcon.addEventListener('click', function () {
+        console.log(2 + 2);
+    });
 
 
 

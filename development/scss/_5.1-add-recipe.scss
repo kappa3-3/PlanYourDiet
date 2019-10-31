@@ -135,10 +135,12 @@ button {
         .orange {
             color: $orangeWarningMessages;
             padding-left: 5px;
+            cursor: pointer;
         }
         .red {
             color: $trashIconColor;
             padding-left: 5px;
+            cursor: pointer;
         }
     }
 }

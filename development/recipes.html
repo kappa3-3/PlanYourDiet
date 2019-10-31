@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Zaplanuj Jedzonko</title>
+    <title>Przepisy</title>
     <link rel="stylesheet" href="./css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext"
           rel="stylesheet">
@@ -28,30 +28,30 @@
 </nav>
 <main class="app-main">
     <section class="app-welcome-dashboard app-welcome-dashboard_whitebg">
-        <header class="recipe-list-header">
-            <h1>Lista przepisów</h1>
-            <a><i class="fas fa-plus-square"></i></a>
-            <hr/>
-        </header>
-        <table class="recipe-list-title-container">
-            <hr/>
-            <tr class="recipe-list-title">
-                <th>id</th>
-                <th>nazwa</th>
-                <th>opis</th>
-                <th>akcje</th>
-            </tr>
-            <hr/>
-            <tr class="recipe-list-value">
-                <td id="recipe-list-counter">1</td>
-                <td id="recipe-list-name">Zapiekanka z ziemniorami</td>
-                <td id="recipe-list-description">Dużo bełkotu jak wspaniale może smakować, a tobie i tak się nigdy nie uda sprostać opisowi.</td>
-                <td id="recipe-list-icons">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-edit"></i>
-                </td>
-            </tr>
-        </table>
+        <div class="recipe-list">
+            <header class="recipe-list-header">
+                <h2>Lista przepisów</h2>
+                <a><i class="fas fa-plus-square"></i></a>
+            </header>
+            <table class="recipe-list-container">
+                <tr class="recipe-list-title">
+                    <th>id</th>
+                    <th>nazwa</th>
+                    <th>opis</th>
+                    <th>akcje</th>
+                </tr>
+                <tr class="recipe-list-value">
+                    <td id="recipe-list-counter">1</td>
+                    <td id="recipe-list-name">Zapiekanka z ziemniorami</td>
+                    <td id="recipe-list-description">Dużo bełkotu jak wspaniale może smakować, a tobie i tak się nigdy nie uda sprostać opisowi.</td>
+                    <td id="recipe-list-icons">
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-trash-alt"></i>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
 
         <div class="app-dashboard-logged-in">
 

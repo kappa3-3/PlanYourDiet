@@ -16,13 +16,15 @@ function urlCheck() {
 urlCheck();
 
 // console.log(ArrayClickedLi);
-    for (let i = 0; i < actualArrayA.length; i++) {
-        console.log(actualArrayA[i]);
-        actualArrayA[i].addEventListener('click', function () {
-        actualArrayA[i].classList.add('hover-clicked');
+for (let i = 0; i < actualArrayA.length; i++) {
+    console.log(actualArrayA[i]);
+    actualArrayA[i].addEventListener('click', function () {
+            actualArrayA[i].classList.add('hover-clicked');
 
-    }
-        )};
+        }
+    )
+}
+;
 //////////////
 // DISPLAY RECIPES FROM LOCAL STORAGE
 //////////////
@@ -31,30 +33,25 @@ const importedTableRow = document.getElementById('recipe-list-value');
 const newId = document.getElementById('recipe-list-counter');
 const newName = document.getElementById('recipe-list-name');
 const newDescription = document.getElementById('recipe-list-description');
-const byBtn = document.querySelector('.fa-plus-square');
 const tableContainer = document.querySelector('.recipe-list-container');
 
-// let recipeTable = {
-//     id: "",
-//     title: "",
-//     description: "",
-// };
-
-
-
-
 const newRecipe = localStorage.getItem('recipes');
-
 const newRecipeObject = JSON.parse(newRecipe);
-    //
-    // console.log(newRecipeObject[0]);
-for (let i = 0; i < newRecipeObject.length; i++) {
+
+importedTableRow.style.display = 'none';
+const len = newRecipeObject.length;
+for (let j = len - 1; j >= 0; j--) {
     let newTableRow = importedTableRow.cloneNode(true);
-    for (let j = 0; j < 3, j++) {
-
-    }
-    tableContainer.appendChild(newTableRow);
+    //////ROW VALUES
+    newId.innerText = j +1;
+    // newId.innerText = newRecipeObject.indexOf(newRecipeObject[j]) + 1; - OTHER OPTION
+    newName.innerText = newRecipeObject[j].title;
+    newDescription.innerText = newRecipeObject[j].description;
+    //////NEW ROW INSERTION
+    importedTableRow.style.display = 'table-row';
+    // tableContainer.appendChild(newTableRow);
+    // - NOT WORKING LAST ITEM APPEARING AT THE BEGGINING
+    importedTableRow.parentNode.insertBefore(newTableRow, importedTableRow.nextSibling);
 };
-
 
 

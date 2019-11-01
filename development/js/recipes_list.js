@@ -23,3 +23,38 @@ urlCheck();
 
     }
         )};
+//////////////
+// DISPLAY RECIPES FROM LOCAL STORAGE
+//////////////
+
+const importedTableRow = document.getElementById('recipe-list-value');
+const newId = document.getElementById('recipe-list-counter');
+const newName = document.getElementById('recipe-list-name');
+const newDescription = document.getElementById('recipe-list-description');
+const byBtn = document.querySelector('.fa-plus-square');
+const tableContainer = document.querySelector('.recipe-list-container');
+
+// let recipeTable = {
+//     id: "",
+//     title: "",
+//     description: "",
+// };
+
+
+
+
+const newRecipe = localStorage.getItem('recipes');
+
+const newRecipeObject = JSON.parse(newRecipe);
+    //
+    // console.log(newRecipeObject[0]);
+for (let i = 0; i < newRecipeObject.length; i++) {
+    let newTableRow = importedTableRow.cloneNode(true);
+    for (let j = 0; j < 3, j++) {
+
+    }
+    tableContainer.appendChild(newTableRow);
+};
+
+
+

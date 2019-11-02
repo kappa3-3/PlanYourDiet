@@ -76,6 +76,10 @@ a {
   overflow-y: scroll;
   border-collapse: collapse;
   table-layout: fixed;
+  tbody {
+    width: 100%;
+    display: table;
+  }
 }
 #recipe-list-value {
   border-bottom: 1px solid $tableTextColorIcons;
@@ -119,3 +123,6 @@ a {
   padding: 15px;
   text-align: left;
 };
+tbody {
+  width: 100%;
+}

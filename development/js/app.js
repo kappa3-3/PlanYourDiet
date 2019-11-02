@@ -50,6 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.onload = setActive;
 
 
+    //Add Plan
+
+    var addPlan = document.querySelector(".adding-plan");
+    addPlan.addEventListener("click", function () {
+        document.querySelector('.adding-new-plan').style.display='block';
+
+    });
+
+
 
 
 });

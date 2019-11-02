@@ -33,7 +33,7 @@ const importedTableRow = document.getElementById('recipe-list-value');
 const newId = document.getElementById('recipe-list-counter');
 const newName = document.getElementById('recipe-list-name');
 const newDescription = document.getElementById('recipe-list-description');
-const tableContainer = document.querySelector('.recipe-list-container');
+// const tableContainer = document.querySelector('.recipe-list-container');
 
 const newRecipe = localStorage.getItem('recipes');
 const newRecipeObject = JSON.parse(newRecipe);
@@ -53,5 +53,3 @@ for (let j = len - 1; j >= 0; j--) {
     // - NOT WORKING LAST ITEM APPEARING AT THE BEGGINING
     importedTableRow.parentNode.insertBefore(newTableRow, importedTableRow.nextSibling);
 };
-
-

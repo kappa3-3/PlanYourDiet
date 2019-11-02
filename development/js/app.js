@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //this will select the active navbar menu element
-    // function setActive() {
-    //     aObj = document.querySelector('.app-navbar').getElementsByTagName('a');
-    //     for(i=0;i<aObj.length;i++) {
-    //         if(document.location.href.indexOf(aObj[i].href)>=0) {
-    //             aObj[i].className='active';
-    //         }
-    //     }
-    // }
-    //
-    // window.onload = setActive;
+    function setActive() {
+        linkedPage = document.querySelector('.app-navbar').getElementsByTagName('a');
+        navbarLi = document.querySelectorAll('.app-navbar__menu-item');
+        for(i = 0 ; i < linkedPage.length; i++) {
+            if(document.location.href.indexOf(linkedPage[i].href) >= 0) {
+                navbarLi[i].className='open';
+            }
+        }
+    }
+    window.onload = setActive;
 
 
     //Add Plan

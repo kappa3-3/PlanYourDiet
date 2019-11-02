@@ -33,6 +33,7 @@
 .app-navbar {
     grid-area: menu;
     background: $bluenavigation;
+    height: calc(100vh - 80px);
 }
 
 .app-row {

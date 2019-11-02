@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');
     const btnSaveClose = document.getElementById('saveClose');
 
+    addRecipe.style.display = "none";
     //Open the recipes box
     addRecipeBtn = document.querySelector('.app-dashboard-widget-add-recipe');
     addPlanBtn = document.querySelector('.app-dashboard-widget-add-plan');

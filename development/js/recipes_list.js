@@ -9,22 +9,19 @@ function urlCheck() {
     var path = window.location.pathname;
     var page = path.split("/").pop();
     if (page === 'recipes.html') {
-        console.log(page);
         whiteBG.style.display = 'block';
     }
 };
 urlCheck();
 
-// console.log(ArrayClickedLi);
-for (let i = 0; i < actualArrayA.length; i++) {
-    console.log(actualArrayA[i]);
-    actualArrayA[i].addEventListener('click', function () {
-            actualArrayA[i].classList.add('hover-clicked');
+// for (let i = 0; i < actualArrayA.length; i++) {
+//     actualArrayA[i].addEventListener('click', function () {
+//             actualArrayA[i].classList.add('hover-clicked');
+//         }
+//     )
+// }
+// ;
 
-        }
-    )
-}
-;
 //////////////
 // DISPLAY RECIPES FROM LOCAL STORAGE
 //////////////
@@ -33,7 +30,6 @@ const importedTableRow = document.getElementById('recipe-list-value');
 const newId = document.getElementById('recipe-list-counter');
 const newName = document.getElementById('recipe-list-name');
 const newDescription = document.getElementById('recipe-list-description');
-// const tableContainer = document.querySelector('.recipe-list-container');
 
 const newRecipe = localStorage.getItem('recipes');
 const newRecipeObject = JSON.parse(newRecipe);
@@ -53,3 +49,17 @@ for (let j = len - 1; j >= 0; j--) {
     // - NOT WORKING LAST ITEM APPEARING AT THE BEGGINING
     importedTableRow.parentNode.insertBefore(newTableRow, importedTableRow.nextSibling);
 };
+
+
+////Open the recipes box
+// const addRecipeBtnRedirect = document.querySelector('.fa-plus-square');
+//
+//
+// addRecipeBtnRedirect.addEventListener('click', function () {
+//     window.location.href = "app.html";
+//     const loggedInDashboard = document.querySelector('.app-dashboard-logged-in');
+//     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');
+//     loggedInDashboard.style.display = "none";
+//     addRecipe.classList.add('fade-in');
+//     addRecipe.style.display = "grid";
+// });

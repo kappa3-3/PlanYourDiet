@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //Add Plan
-
-    var addPlan = document.querySelector(".adding-plan");
-    addPlan.addEventListener("click", function () {
-        document.querySelector('.adding-new-plan').style.display='block';
-
-    });
+    //
+    // var addPlan = document.querySelector(".adding-plan");
+    // addPlan.addEventListener("click", function () {
+    //     document.querySelector('.adding-new-plan').style.display='block';
+    //
+    // });
 
 
 

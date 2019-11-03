@@ -13,17 +13,18 @@
 </head>
 <body class="app-body">
 <header class="app-header">
-    <h1 class="app-header-h1">
+    <a href="index.html">
+        <h1 class="app-header-h1">
         <span id="first">Zaplanuj</span>
         <span id="second">Jedzonko</span>
     </h1>
+    </a>
     <div class="app-header__imie"><span id="nameInHeader">Imię</span><i class="fas fa-user-circle"></i></div>
 </header>
 <nav class="app-navbar">
     <ul class="app-navbar__menu">
-        <li class="app-navbar__menu-item">Pulpit</li>
+        <li class="app-navbar__menu-item"><a href="app.html">Pulpit</a></li>
         <li class="app-navbar__menu-item"><a href="recipes.html">Przepisy</a></li>
-        <li class="app-navbar__menu-item">Plany</li>
     </ul>
 </nav>
 <main class="app-main">
@@ -43,8 +44,14 @@
             </div>
         </div>
         <div class="app-dashboard-logged-in">
-            <div class="app-dashboard-widget app-dashboard-widget-add-recipe">aaa</div>
-            <div class="app-dashboard-widget app-dashboard-widget-add-plan">sss</div>
+            <div class="app-dashboard-widget app-dashboard-widget-add-recipe">
+                <i class="far fa-plus-square"></i>
+                <p>Dodaj przepis</p>
+            </div>
+            <div class="app-dashboard-widget app-dashboard-widget-add-plan">
+                <i class="far fa-plus-square"></i>
+                <p>Dodaj plan</p>
+            </div>
             <div class="app-dashboard-info-box app-dashboard-info-boxes__box-quantity"><i
                     class="fas fa-info-circle"></i>
                 <p>Masz już 99 przepisów, nieźle!</p><i class="fas fa-window-close"></i></div>

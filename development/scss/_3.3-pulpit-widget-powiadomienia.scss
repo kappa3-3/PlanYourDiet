@@ -5,8 +5,9 @@
     grid-gap: 20px;
     width: 100%;
     height: 100%;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    //grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 60px);
     grid-template-areas: "dpr dpr dpr dpl dpl dpl qu qu qu qu qu qu qu qu qu"
                          "dpr dpr dpr dpl dpl dpl re re re re re re re re re"
                          "dpr dpr dpr dpl dpl dpl gr gr gr gr gr gr gr gr gr"

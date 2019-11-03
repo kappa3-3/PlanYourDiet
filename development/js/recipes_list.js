@@ -51,7 +51,7 @@ for (let j = len - 1; j >= 0; j--) {
 };
 
 
-////Open the recipes box
+// //Open the recipes box
 // const addRecipeBtnRedirect = document.querySelector('.fa-plus-square');
 //
 //
@@ -62,4 +62,5 @@ for (let j = len - 1; j >= 0; j--) {
 //     loggedInDashboard.style.display = "none";
 //     addRecipe.classList.add('fade-in');
 //     addRecipe.style.display = "grid";
+//
 // });

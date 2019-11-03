@@ -55,12 +55,12 @@ for (let j = len - 1; j >= 0; j--) {
 // const addRecipeBtnRedirect = document.querySelector('.fa-plus-square');
 //
 //
-// addRecipeBtnRedirect.addEventListener('click', function () {
+// addRecipeBtnRedirect.addEventListener('click', function (event) {
+//     event.preventDefault();
 //     window.location.href = "app.html";
 //     const loggedInDashboard = document.querySelector('.app-dashboard-logged-in');
 //     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');
 //     loggedInDashboard.style.display = "none";
 //     addRecipe.classList.add('fade-in');
 //     addRecipe.style.display = "grid";
-//
 // });

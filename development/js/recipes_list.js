@@ -51,11 +51,12 @@ for (let j = len - 1; j >= 0; j--) {
 };
 
 
-////Open the recipes box
+// //Open the recipes box
 // const addRecipeBtnRedirect = document.querySelector('.fa-plus-square');
 //
 //
-// addRecipeBtnRedirect.addEventListener('click', function () {
+// addRecipeBtnRedirect.addEventListener('click', function (event) {
+//     event.preventDefault();
 //     window.location.href = "app.html";
 //     const loggedInDashboard = document.querySelector('.app-dashboard-logged-in');
 //     const addRecipe = document.querySelector('.app-dashboard-logged-in__add-recipe');

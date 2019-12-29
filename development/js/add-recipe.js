@@ -140,13 +140,13 @@ const olInstrucitonsList = document.getElementById('add-recipe__instructions-lis
             dataFromLocalStorage.push(newRecipe);
             localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
         }
-        alert("Przepis zapisany do localStorage");
+        alert("Recipe saved to local storage");
     }
 
     btnSaveClose.addEventListener('click', function (e) {
 
         if (recipeTitle.value === "" || recipeDescription.value === ""){
-            alert("Musisz uzupełnić wszystkie pola")
+            alert("All fields required")
         } else {
             e.preventDefault();
             newRecipe.title = recipeTitle.value;
@@ -158,8 +158,6 @@ const olInstrucitonsList = document.getElementById('add-recipe__instructions-lis
             loggedInDashboard.style.display = "grid";
             addRecipe.classList.add('fade-in');
         }
-
-
 
     });
 

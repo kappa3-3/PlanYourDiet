@@ -19,6 +19,7 @@ nextBtn.addEventListener('click', function () {
     liArray[currentIndex].style.display = 'block';
     liArray[currentIndex].style.transition = "transform .5s ease-in-out";
 });
+
 prevBtn.addEventListener('click', function () {
     if (currentIndex === 0){
         currentIndex = liArray.length -1;
@@ -30,8 +31,8 @@ prevBtn.addEventListener('click', function () {
     }
     liArray[currentIndex].style.display = 'block';
 });
+
 //1.3 Redirect button
 document.getElementById("ToAppBtn").onclick = function () {
-
-    location.href = "../app.html";
+    location.href = "app.html";
 };

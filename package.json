@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodersLab-core/FER_SCRUM_LAB.git"
+    "url": "git+https://github.com/kappa3-3/PlanYourDiet.git"
   },
   "author": "Michał T",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodersLab-core/FER_SCRUM_LAB/issues"
+    "url": "https://github.com/kappa3-3/PlanYourDiet/issues"
   },
-  "homepage": "https://github.com/CodersLab-core/FER_SCRUM_LAB#readme",
+  "homepage": "https://github.com/kappa3-3/PlanYourDiet#readme",
   "devDependencies": {
     "browser-sync": "^2.26.0",
     "gulp": "^4.0.0",
@@ -24,3 +24,6 @@
     "gulp-sourcemaps": "^2.6.4"
   }
 }
+
+
+

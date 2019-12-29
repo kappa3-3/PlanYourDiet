@@ -1,17 +1,188 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Zaplanuj Jedzonko</title>
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Hello App!</h1>
-    </header>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Plan your diet</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext"
+          rel="stylesheet">
+</head>
+<body class="app-body">
+<header class="app-header">
+    <a href="index.html">
+        <h1 class="app-header-h1">
+            <span id="first">Plan</span>
+            <span id="second">Your Diet</span>
+        </h1>
+    </a>
+    <div class="app-header__name"><span id="nameInHeader">Name</span><i class="fas fa-user-circle"></i></div>
+</header>
+<nav class="app-navbar">
+    <ul class="app-navbar__menu">
+        <li class="app-navbar__menu-item"><a href="app.html">Desktop</a></li>
+        <li class="app-navbar__menu-item"><a href="recipes.html">Recipes</a></li>
+    </ul>
+</nav>
+<main class="app-main">
+    <section class="app-welcome-dashboard app-welcome-dashboard_whitebg">
+        <div class="app-welcome">
+            <p class="app-welcome-text">
+                <u class="app-welcome-text_welcome">Welcome,</u><br>
+                it looks like you are here for the first time!
+            </p>
+            <div class="name-input">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required
+                       placeholder="Tutaj wpisz jak masz na imię">
+                <button id="send-name-button" class="send-name-button">Done!</button>
+                <p class="app-welcome-text__below-button">Tell us your name and we will adjust our app for you:)</p>
+            </div>
+        </div>
+        <div class="app-dashboard-logged-in">
+            <div class="app-dashboard-widget app-dashboard-widget-add-recipe">
 
-    <script src="./js/app.js"></script>
-  </body>
+                <i class="far fa-plus-square"></i>
+                <p>Add recipe</p>
+            </div>
+            <div class="app-dashboard-widget app-dashboard-widget-add-plan">
+                <i class="far fa-plus-square"></i>
+                <p>Add plan</p>
+            </div>
+
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-quantity"><i
+                    class="fas fa-info-circle"></i>
+                <p>You have 99 recipes!</p><i class="fas fa-window-close"></i></div>
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-reminder"><i
+                    class="fas fa-exclamation-circle"></i>
+                <p>Remember to add a plan!</p><i class="fas fa-window-close"></i>
+            </div>
+            <div class="app-dashboard-info-box app-dashboard-info-boxes__box-great"><i class="fas fa-check-circle"></i>
+                <p>It's great you are here! Good luck with the planning:)</p><i class="fas fa-window-close"></i></div>
+            <div class="app-weekly-plan">
+                <p>Your plan for this week: </p>
+                <table class="tg weekly-plan">
+                    <tr>
+                        <th class="tg-fymr">Monday</th>
+                        <th class="tg-fymr">Tuesday</th>
+                        <th class="tg-fymr">Wednesday</th>
+                        <th class="tg-fymr">Thursday</th>
+                        <th class="tg-fymr">Friday</th>
+                        <th class="tg-fymr">Saturday</th>
+                        <th class="tg-fymr">Sunday</th>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                        <td class="tg-0pky">breakfast</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                        <td class="tg-0pky">lunch</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                        <td class="tg-0pky">dinner</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                        <td class="tg-0pky">supper</td>
+                    </tr>
+                </table>
+                <div class="plan-tygodnia-next-prev">
+                    <div class="prevuius-plan"><i class="fas fa-angle-double-left"></i>previous</div>
+                    <div class="next-plan">next<i class="fas fa-angle-double-right"></i></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="app-dashboard-logged-in__add-recipe">
+            <div class="add-recipe__header">
+                <h2>New recipe</h2>
+                <button id="saveClose">Save and close</button>
+            </div>
+            <div class="add-recipe__recipe-name">
+                <p>Recipe name</p>
+                <label for="recipe-name">Name (4 to 8 characters):</label>
+                <input
+                        type="text"
+                        id="recipe-name"
+                        name="recipe-name"
+                        required
+                        placeholder="Add a title...">
+            </div>
+            <div class="add-recipe__recipe-description">
+                <p>Recipe description</p>
+                <label for="recipe-description">Name (4 to 8 characters):</label>
+                <textarea
+                        id="recipe-description"
+                        name="description-name"
+                        rows="4"
+                        cols="50"
+                        required
+                        placeholder="Add a description...">
+                </textarea>
+            </div>
+            <div class="add-recipe__instructions">
+                <h3>Instructions</h3>
+                <div class="instruction-add-functionality">
+                    <textarea name="instructions"
+                              id="add-recipe-instructions"
+                              rows="4"
+                              class="instructions"
+                              placeholder="Add instructions..."></textarea>
+                    <i class="fas fa-plus-square" id="btnAddInstructions"></i>
+                </div>
+            </div>
+            <div class="add-recipe__ingredients">
+                <h3>Ingredients</h3>
+                <div class="ingredient-add-functionality">
+                    <textarea
+                            name="ingredients"
+                            id="add-recipe-ingredients"
+                            rows="4"
+                            class="ingredients"
+                            placeholder="Add ingredients..."></textarea>
+                    <i class="fas fa-plus-square" id="btnAddIngredients"></i>
+                </div>
+            </div>
+            <div class="add-recipe__instructions-list">
+                <ol id="add-recipe__instructions-list-ollist">
+                </ol>
+            </div>
+            <div class="add-recipe__ingredients-list">
+                <ul id="add-recipe__ingredients-list-ullist">
+                </ul>
+            </div>
+
+
+        </div>
+
+    </section>
+</main>
+<script src="./js/app.js"></script>
+<script src="./js/add-recipe.js"></script>
+</body>
 </html>

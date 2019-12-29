@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext"
+          rel="stylesheet">
+
+</head>
+<body class="app-body">
+<header class="app-header">
+    <a href="index.html">
+        <h1 class="app-header-h1">
+            <span id="first">Plan</span>
+            <span id="second">YourDiet</span>
+        </h1>
+    </a>
+    <div class="app-header__name"><span id="nameInHeader">Name</span><i class="fas fa-user-circle"></i></div>
+</header>
+<nav class="app-navbar">
+    <ul class="app-navbar__menu">
+        <li class="app-navbar__menu-item"><a href="app.html">Desktop</a></li>
+        <li class="app-navbar__menu-item" id="navbar-current-page"><a href="recipes.html">Recipes</a></li>
+    </ul>
+</nav>
+<main class="app-main">
+    <section class="app-welcome-dashboard app-welcome-dashboard_whitebg">
+        <div class="recipe-list">
+            <header class="recipe-list-header">
+                <h2>List of recipes</h2>
+                <a href="app.html"><i class="fas fa-plus-square"></i></a>
+            </header>
+            <table class="recipe-list-intro">
+                <tr class="recipe-list-title">
+                    <th class="recipe-list-counter">id</th>
+                    <th class="recipe-list-name">name</th>
+                    <th class="recipe-list-description">description</th>
+                    <th class="recipe-list-icons">action</th>
+                </tr>
+            </table>
+            <table class="recipe-list-container">
+                <tr id="recipe-list-value">
+                    <td id="recipe-list-counter" class="recipe-list-counter"></td>
+                    <td id="recipe-list-name" class="recipe-list-name"></td>
+                    <td id="recipe-list-description" class="recipe-list-description"></td>
+                    <td id="recipe-list-icons" class="recipe-list-icons">
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-trash-alt"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+
+</main>
+
+<script src="./js/logincheck.js"></script>
+<script src="./js/recipes_list.js"></script>
+
+</body>
+</html>
